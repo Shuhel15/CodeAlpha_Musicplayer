@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="music-player-container">
+        <div class="player-card glass-card neon-glow">
+            <div class="player-grid">
+                <div class="album-section">
+                    <div class="vinyl-container">
+                        <div class="vinyl-record" id="vinylRecord">
+                            <div class="vinyl-inner">
+                                <div class="vinyl-center">
+                                    <div class="track-cover" id="trackCover">🎵</div>
+                                </div>
+                            </div>
+                            <div class="vinyl-hole"></div>
+                        </div>
+                        <div class="vinyl-glow"></div>
+                    </div>
+                    <div class="visualization-container">
+                        <div class="visualization-bars" id="visualizationBars"></div>
+                    </div>
+                </div>
+                <div class="controls-section">
+                    <div class="track-info">
+                        <h2 class="track-title" id="trackTitle">Loading...</h2>
+                        <p class="track-artist" id="trackArtist">Please wait</p>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-container">
+                            <input type="range" id="progressSlider" class="progress-slider" min="0" max="0" value="0" />
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                    <div class="main-controls">
+                        <button class="control-btn" id="shuffleBtn"><i class="fas fa-random"></i></button>
+                        <button class="control-btn" id="prevBtn"><i class="fas fa-step-backward"></i></button>
+                        <button class="play-btn" id="playBtn"><i class="fas fa-play" id="playIcon"></i></button>
+                        <button class="control-btn" id="nextBtn"><i class="fas fa-step-forward"></i></button>
+                        <button class="control-btn" id="repeatBtn"><i class="fas fa-redo"></i></button>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="70" />
+                        <span id="volumeDisplay">70</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playlist-card glass-card">
+            <h3 class="playlist-title">Playlist</h3>
+            <div class="playlist-container" id="playlistContainer"></div>
+        </div>
+    </div>
+
+
+     <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="sledeshow">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
